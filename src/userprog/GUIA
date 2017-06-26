@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+
+
+../../utils/pintos-mkdisk myfile.dsk --filesys-size=5 &&
+../../utils/pintos --qemu --disk=myfile.dsk -- -f -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -p ../../examples/diner -a diner -- -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -p ../../examples/philosopher -a philosopher -- -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -- -q run diner
+
+
+
+
+../../utils/pintos --qemu --disk=myfile.dsk -p ../../examples/bounded -a bounded -- -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -p ../../examples/consumerB -a consumerB -- -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -p ../../examples/producer -a producer -- -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -- -q run bounded
+
+
+../../utils/pintos --qemu --disk=myfile.dsk -p ../../examples/book -a book -- -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -p ../../examples/writer -a writer -- -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -p ../../examples/reader -a reader -- -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -- -q run book
+
+
+
+
+../../utils/pintos --qemu --disk=myfile.dsk -p ../../examples/diner -a diner -- -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -p ../../examples/philosopher -a philosopher -- -q &&
+../../utils/pintos --qemu --disk=myfile.dsk -- -q run diner
